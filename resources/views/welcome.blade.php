@@ -6,52 +6,97 @@
     <title>Libros</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
         }
         .nav-bar {
             display: flex;
             justify-content: flex-end;
+            align-items: center;
+            background-color: #343a40;
             padding: 1em;
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e9ecef;
+            color: white;
         }
         .nav-bar a {
-            margin-left: 1em;
             text-decoration: none;
-            color: #007bff;
+            color: white;
+            margin-left: 1em;
         }
         .nav-bar a:hover {
             text-decoration: underline;
         }
         .container {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 2em;
         }
-        .form-container {
+        h1 {
+            font-size: 2.5em;
             margin-bottom: 1em;
+            color: #343a40;
+            text-align: center;
+        }
+        .form-container {
+            margin-bottom: 2em;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input[type="text"] {
+            padding: 0.5em;
+            font-size: 1em;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            width: 70%;
+        }
+        button[type="submit"] {
+            padding: 0.5em 1em;
+            font-size: 1em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1em;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5em;
         }
         .grid-item {
-            background-color: #f8f9fa;
-            padding: 1em;
-            border: 1px solid #e9ecef;
-            border-radius: 5px;
+            background-color: white;
+            padding: 1.5em;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .grid-item:hover {
+            transform: translateY(-5px);
         }
         .grid-item h2 {
             margin: 0 0 0.5em;
-            font-size: 1.2em;
+            font-size: 1.5em;
+            color: #343a40;
         }
         .grid-item p {
-            margin: 0.2em 0;
+            margin: 0.5em 0;
+            color: #6c757d;
         }
-        .grid-item .disponible {
+        .disponible {
             font-weight: bold;
             color: #28a745;
         }
-        .grid-item .no-disponible {
+        .no-disponible {
             font-weight: bold;
             color: #dc3545;
         }
